@@ -2,19 +2,15 @@ name: Frontend CI/CD
 
 on:
   push:
-<<<<<<< HEAD
     branches: [NewerObinnabyte]
   pull_request:
     branches: [NewerObinnabyte]
-=======
-    branches: [NewerObinnabyte] 
-  pull_request:
-    branches: [NewerObinnabyte]
->>>>>>> 2b2ced5e (Add CI/CD workflows for frontend and backend)
 
 jobs:
   build-and-push:
+    name: Build and Push Frontend Docker Image
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -35,4 +31,41 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/dream-vacation-frontend:${{ github.sha }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
