@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Containerized-Dream-Vacation-App1
 
 ## Frontend/Dockerfile
@@ -18,3 +19,32 @@
 ## README.md
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App1/blob/4f03ce09d9f220a84d2cc2db53998469259d9e92/Screenshot%20From%202025-07-19%2021-04-37.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App1/blob/c8eb10b1506c8a413802bad7bdbb396d373c55e2/Screenshot%20From%202025-07-19%2021-05-33.png)
+=======
+# Dream Vacation Destinations
+
+This application allows users to create a list of countries they'd like to visit, providing basic information about each country.
+
+## Setup
+
+### Backend
+1. Navigate to the `backend` directory
+2. Run `npm install` to install dependencies
+3. Set up your PostgreSQL database and update the `.env` file with your database URL
+4. Run `npm start` to start the server
+
+### Frontend
+1. Navigate to the `frontend` directory
+2. Run `npm install` to install dependencies
+3. Run `npm start` to start the React development server
+
+## Features
+- Add countries to your dream vacation list
+- View details about each country (capital, population, region)
+- Remove countries from your list
+
+## Technologies Used
+- Frontend: React
+- Backend: Node.js with Express
+- Database: PostgreSQL
+- External API: REST Countries API
+>>>>>>> 1a73ed5f (first commit)
