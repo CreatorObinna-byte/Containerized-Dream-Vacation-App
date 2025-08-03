@@ -77,6 +77,6 @@ I created the Backend.yml and frontend.yml
 Both images were pushed successfully.
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/NewerObinnabyte/Screenshot%202025-08-03%20174938.png?raw=true)
 
-![Screenshot](Screenshot 2025-08-03 175045.png)
+![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/NewerObinnabyte/Screenshot%202025-08-03%20175045.png?raw=true)
 
 ![Screenshot](Screenshot 2025-08-03 175045.png)
