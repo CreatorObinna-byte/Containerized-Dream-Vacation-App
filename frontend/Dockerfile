@@ -1,5 +1,9 @@
 # Stage 1: Build React app
 FROM node:18 AS builder
+
+# ✅ Fix OpenSSL compatibility
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
