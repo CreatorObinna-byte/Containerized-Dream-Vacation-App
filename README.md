@@ -17,6 +17,7 @@
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App1/blob/576934be989b4107618d509ad442005a09fbd2bf/Screenshot%20From%202025-07-19%2014-41-03.png)
 
 ## README.md
+
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App1/blob/4f03ce09d9f220a84d2cc2db53998469259d9e92/Screenshot%20From%202025-07-19%2021-04-37.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App1/blob/c8eb10b1506c8a413802bad7bdbb396d373c55e2/Screenshot%20From%202025-07-19%2021-05-33.png)
 =======
@@ -73,9 +74,11 @@ This application allows users to create a list of countries they'd like to visit
 - **Documentation**: The project is well-documented to facilitate onboarding and maintenance.
 >>>>>>> 81787e3b (modified Readme.md)
 
-I created the Backend.yml and frontend.yml 
+## UPDATED README.md
 
-Both images were pushed successfully.
+I created the Backend.yml and frontend.yml which triggers upon push.
+
+Both images built successfully.
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/NewerObinnabyte/Screenshot%202025-08-03%20174938.png?raw=true)
 
 
