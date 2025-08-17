@@ -1,0 +1,50 @@
+name: Dream Vacation App Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - DreamAppEC2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sync project files to remote server
+        uses: burnett01/rsync-deployments@5.0
+        with:
+          switches: -avz --delete
+          path: ./
+          remote_path: /home/user/app
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_SSH_KEY }}
+
+      - name: Deploy app via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
+          script: |
+            cd /home/user/app
+
+            # Optional: pull latest Docker images
+            docker compose pull
+
+            # Optional: create .env file
+            cat <<EOF > .env
+            APP_ENV=production
+            DB_HOST=localhost
+            DB_PORT=5432
+            DB_USER=admin
+            DB_PASSWORD=secret
+            EOF
+
+            # Start or update containers
+            docker compose up -d --remove-orphans
+
