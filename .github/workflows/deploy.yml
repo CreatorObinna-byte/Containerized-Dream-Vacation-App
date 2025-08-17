@@ -1,4 +1,4 @@
-name: Dream Vacation App Deployment
+name: Deploy Dream Vacation App 
 
 on:
   workflow_dispatch:
@@ -14,31 +14,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Sync project files to remote server
+      - name: Sync project files to EC2 with rsync
         uses: burnett01/rsync-deployments@5.0
         with:
           switches: -avz --delete
           path: ./
           remote_path: /home/user/app
-          remote_host: ${{ secrets.REMOTE_HOST }}
-          remote_user: ${{ secrets.REMOTE_USER }}
-          remote_key: ${{ secrets.REMOTE_SSH_KEY }}
+          remote_host: ${{ secrets.EC2_HOST }}
+          remote_user: ${{ secrets.EC2_USER }}
+          remote_key: ${{ secrets.EC2_SSH_KEY }}
 
       - name: Deploy app via SSH
         uses: appleboy/ssh-action@v0.1.7
         with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.REMOTE_SSH_KEY }}
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/user/app
+            sudo apt update && sudo apt install -y jq
+            cd /home/ubuntu/dream-vacation
 
             # Optional: pull latest Docker images
             docker compose pull
 
             # Optional: create .env file
             cat <<EOF > .env
-            APP_ENV=production
+            APP_ENV=DreamAppEC2
             DB_HOST=localhost
             DB_PORT=5432
             DB_USER=admin
