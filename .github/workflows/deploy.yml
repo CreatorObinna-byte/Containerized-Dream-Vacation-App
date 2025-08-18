@@ -9,35 +9,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy via rsync
-        uses: burnett01/rsync-deployments@5.0
-        with:
-          switches: -avz --delete
-          path: ./
-          remote_path: /home/ubuntu/app
-          remote_host: ${{ secrets.EC2_HOST }}
-          remote_user: ${{ secrets.EC2_USER }}
-          remote_key: ${{ secrets.EC2_SSH_KEY }}
-
-      - name: Deploy app via SSH
+      - name: SSH and deploy
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo apt update && sudo apt install -y jq
-            cd /home/ubuntu/dream-vacation
+            sudo apt update && sudo apt install -y jq docker-compose
+            mkdir -p /home/ubuntu/dream-vacation
+            cd /home/ubuntu/dream-vacation || exit 1
 
-            # Optional: pull latest Docker images
-            docker compose pull
+            docker-compose pull
 
-            # Optional: create .env file
             cat <<EOF > .env
             APP_ENV=DreamAppEC2
             DB_HOST=localhost
@@ -46,6 +31,6 @@ jobs:
             DB_PASSWORD=secret
             EOF
 
-            # Start or update containers
-            docker compose up -d --remove-orphans
+            docker-compose up -d --remove-orphans
+
 
