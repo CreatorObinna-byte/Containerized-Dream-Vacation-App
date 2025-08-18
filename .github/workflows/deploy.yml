@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Sync project files to EC2 with rsync
+      - name: Deploy via rsync
         uses: burnett01/rsync-deployments@5.0
         with:
           switches: -avz --delete
-          path: ./
+          path: ./frontend/build/
           remote_path: /home/user/app
           remote_host: ${{ secrets.EC2_HOST }}
           remote_user: ${{ secrets.EC2_USER }}
