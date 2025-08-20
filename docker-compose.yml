@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-   image:  creatorobinnabyte/dream-vacation-frontend:FRONTEND_IMAGE_SHA
+   image:  creatorobinnabyte/dream-vacation-frontend:${FRONTEND_IMAGE_SHA}
     ports:
       - "3000:80"  
     depends_on:
@@ -11,7 +11,7 @@ services:
       - app-network
 
   backend:
-    image: creatorobinnabyte/dream-vacation-backend:BACKEND_IMAGE_SHA
+    image: creatorobinnabyte/dream-vacation-backend:${BACKEND_IMAGE_SHA}
     ports:
       - "5000:5000"
     env_file:
