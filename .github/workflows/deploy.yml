@@ -43,13 +43,13 @@ jobs:
 
             # Optional: create .env file
             cat <<EOF > .env
-              FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_SHA}
-              BACKEND_IMAGE_TAG=${BACKEND_IMAGE_SHA}
-              APP_ENV=DreamAppEC2
-              DB_HOST=localhost
-              DB_PORT=5432
-              DB_USER=admin
-              DB_PASSWORD=secret
+            FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_SHA}
+            BACKEND_IMAGE_TAG=${BACKEND_IMAGE_SHA}
+            APP_ENV=DreamAppEC2
+            DB_HOST=localhost
+            DB_PORT=5432
+            DB_USER=admin
+            DB_PASSWORD=secret
             EOF
 
 
