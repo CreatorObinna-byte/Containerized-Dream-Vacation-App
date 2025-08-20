@@ -89,3 +89,6 @@ Both images built successfully.
 
 
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/NewerObinnabyte/Screenshot%202025-08-03%20175515.png?raw=true)
+
+
+## DEPLOYING DREAM VACATION APP TO EC2.
