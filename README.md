@@ -94,3 +94,5 @@ Both images built successfully.
 ## DEPLOYING DREAM VACATION APP TO EC2.
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230117.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230229.png)
+![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20232236.png)
+![Screenshot](
