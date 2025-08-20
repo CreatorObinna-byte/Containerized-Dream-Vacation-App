@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-   image:  creatorobinnabyte/dream-vacation-frontend
+   image:  creatorobinnabyte/dream-vacation-frontend:FRONTEND_IMAGE_SHA
     ports:
       - "3000:80"  
     depends_on:
