@@ -92,8 +92,11 @@ Both images built successfully.
 
 
 ## DEPLOYING DREAM VACATION APP TO EC2.
+
+Below are pictorial representations of the deployment of the Dream app to EC2.
+It begins with the creation of various tools such as the VPCs, SUBNETs, INTERNET GATEWAY, ROUTE TABLE and finally the EC2 INSTANCE.
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230117.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230229.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20232236.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%20From%202025-08-20%2021-49-49.png)
-![Screenshot](
+![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%20From%202025-08-20%2021-27-40.png)
