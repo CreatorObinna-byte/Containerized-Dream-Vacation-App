@@ -95,4 +95,5 @@ Both images built successfully.
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230117.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20230229.png)
 ![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%202025-08-20%20232236.png)
+![Screenshot](https://github.com/CreatorObinna-byte/Containerized-Dream-Vacation-App/blob/DreamAppEC2/Screenshot%20From%202025-08-20%2021-49-49.png)
 ![Screenshot](
