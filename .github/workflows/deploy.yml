@@ -30,17 +30,17 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo apt update && sudo apt install -y jq docker-compose
+            sudo apt update && sudo apt install -y jq 
             mkdir -p /home/ubuntu/dream-vacation
             cd /home/ubuntu/dream-vacation || exit 1
 
             # Optional: create .env file
             cat <<EOF > .env
-            APP_ENV=DreamAppEC2
-            DB_HOST=localhost
-            DB_PORT=5432
-            DB_USER=admin
-            DB_PASSWORD=secret
+              APP_ENV=DreamAppEC2
+              DB_HOST=localhost
+              DB_PORT=5432
+              DB_USER=admin
+              DB_PASSWORD=secret
             EOF
 
             docker-compose up -d --remove-orphans
