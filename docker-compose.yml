@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   frontend:
-   image:  creatorobinnabyte/dream-vacation-frontend:${FRONTEND_IMAGE_SHA}
+    image: creatorobinnabyte/dream-vacation-frontend:${FRONTEND_IMAGE_SHA}
     ports:
       - "3000:80"  
     depends_on:
@@ -35,6 +33,7 @@ services:
 
 volumes:
   postgres_data:
+
 networks:
   app-network:
-    driver: bridge 
+    driver: bridge
