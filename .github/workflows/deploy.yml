@@ -38,8 +38,8 @@ jobs:
             mkdir -p /home/ubuntu/dream-vacation
             cd /home/ubuntu/dream-vacation || exit 1
 
-            FRONTEND_IMAGE_SHA=$(curl -s "https://hub.docker.com/v2/repositories/creatorobinnabyte/dream-vacation-frontend/tags?page_size=1&page=1&ordering=last_updated" | jq -r '.results[0].name')
-            BACKEND_IMAGE_SHA=$(curl -s "https://hub.docker.com/v2/repositories/creatorobinnabyte/dream-vacation-backend/tags?page_size=1&page=1&ordering=last_updated" | jq -r '.results[0].name')
+            # FRONTEND_IMAGE_SHA=$(curl -s "https://hub.docker.com/v2/repositories/creatorobinnabyte/dream-vacation-frontend/tags?page_size=1&page=1&ordering=last_updated" | jq -r '.results[0].name')
+            # BACKEND_IMAGE_SHA=$(curl -s "https://hub.docker.com/v2/repositories/creatorobinnabyte/dream-vacation-backend/tags?page_size=1&page=1&ordering=last_updated" | jq -r '.results[0].name')
 
             # Optional: create .env file
             cat <<EOF > .env
